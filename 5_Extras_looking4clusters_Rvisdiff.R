@@ -20,7 +20,7 @@ players <- apply(subset,1,function(x){
   return(!sum(is.na(x)))
 })
 
-obj <- getClusters(subset[players,-c(1:5,13,22,23)], groups=laliga[players,'position'], threads = 2)
+obj <- l4c(subset[players,-c(1:5,13,22,23)], groups=laliga[players,'position'], threads = 2)
 plot(obj, dir="laliga_l4c")
 
 
